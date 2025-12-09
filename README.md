@@ -1,15 +1,45 @@
-# 🔒 Security Scanner
+# Security Scanner
 
-Automated security vulnerability scanner.
+An automated security scanning tool for codebases.
 
 ## Features
-- SAST and DAST scanning
-- Dependency vulnerability detection
-- Container image scanning
-- CI/CD integration
-- Compliance checking
-- Detailed reporting
+
+- Secret detection
+- SQL injection scanning
+- XSS vulnerability detection
+- File system scanning
+- Report generation
+
+## Tech Stack
+
+- **Language**: Node.js
+- **File System**: Native fs module
+
+## Project Structure
+
+\`\`\`
+security-scanner/
+├── src/
+│   ├── scanner.js       # Core scanner
+│   ├── utils/           # Report generator
+│   └── index.js         # API server
+└── package.json
+\`\`\`
+
+## Usage
+
+\`\`\`bash
+# CLI
+npm run scan
+
+# API Server
+npm start
+\`\`\`
+
+## API Endpoints
+
+- \`POST /scan\` - Scan directory for vulnerabilities
 
 ---
 
-**POWERED BY L8AB SYSTEMS** ⚡
+**POWERED BY L8AB SYSTEMS**
