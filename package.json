@@ -1,0 +1,11 @@
+{
+  "name": "security-scanner",
+  "version": "1.0.0",
+  "description": "Security Scanner Tool by L8ab Systems",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "scan": "node src/cli.js"
+  },
+  "dependencies": {}
+}
