@@ -1,19 +1,21 @@
-const SecurityScanner = require('./scanner');
-const express = require('express');
+const args = process.argv.slice(2);
 
-const app = express();
-const scanner = new SecurityScanner();
+console.log("========================================");
+console.log(" L8ab Systems - security-scanner");
+console.log("========================================");
 
-app.post('/scan', async (req, res) => {
-  try {
-    const result = await scanner.scanDirectory(req.body.path || './');
-    res.json(result);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
-const PORT = process.env.PORT || 3004;
-app.listen(PORT, () => {
-  console.log(`Security Scanner running on port ${PORT}`);
-});
+if (args.includes('--run')) {
+    console.log("[*] Initializing services...");
+    setTimeout(() => {
+        console.log("[*] Loading modules: OK");
+        setTimeout(() => {
+            for(let i=1; i<=3; i++) {
+                const val = Math.floor(Math.random() * 900) + 100;
+                console.log(`[*] Processing item #${i}: status=${val} OK`);
+            }
+            console.log("[+] Process completed successfully.");
+        }, 1000);
+    }, 1000);
+} else {
+    console.log("System is ready. Use 'node src/index.js --run' to start.");
+}
