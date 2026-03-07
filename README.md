@@ -1,3 +1,5 @@
+![Build Status](https://img.shields.io/github/actions/workflow/status/L8ab/security-scanner/ci.yml?branch=main) ![License](https://img.shields.io/github/license/L8ab/security-scanner)
+
 # Security Scanner
 
 An automated security scanning tool for codebases.
@@ -43,3 +45,7 @@ npm start
 ---
 
 **POWERED BY L8AB SYSTEMS**
+
+
+## Structure
+This repository is configured with enterprise standards, CI pipelines, and a structured codebase.
